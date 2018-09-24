@@ -1,0 +1,11 @@
+version: "3.6"
+services:
+  backend:
+    build:
+      context: ../../backend
+      dockerfile: $PWD/backend/Dockerfile
+    ports:
+      - "3000:3000"
+      - "30000:9229"
+    volumes:
+      - ../../backend/src:/app/src
